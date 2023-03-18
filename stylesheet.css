@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    background-image: url("/imgs/L1.jpg");
+    
+}
+
+
+.sub-container{
+    max-width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+    gap: 10px;
+    padding: 10px;
+    overflow: hidden;
+
+
+
+}
+.item1,.item2,.item3,.item4,.item5{
+    background-color: rgba(228, 223, 223, 0.08);
+    position: relative;
+    border: 2px solid rgba(19, 18, 18, .2);
+    border-radius: 20px;
+}
+.item1 {
+grid-row-start: 1;
+grid-row-end: 3;
+position: relative;
+  
+}
+
+
+#clock-header{
+  font-size: 20px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bolder;
+} 
+/*  ..............logo.................. */
+.item2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  position: relative;
+
+}
+.logoandname-container {
+  position: absolute;
+  margin-top: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+ 
+  
+}
+
+.img-box img{
+  max-width: 300px;
+  max-height: 200px;
+ 
+}
+
+.upload input{
+  display: none;
+ }
+.upload label{
+  color: gray;
+  border: 1px dashed gray;
+  cursor: pointer;
+   display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 15px;
+ border-radius: 2px;
+} 
+
+
+.item3 {
+  
+  grid-row-start: 1;
+  grid-row-end: 4;
+
+}
+
+.item3 .todo{
+  margin-top: 30px;
+ position: absolute;
+ align-items: center;
+ left: 50%;
+ transform: translateX(-50%);
+  
+  
+}
+
+.item4 {
+grid-row-start: 3;
+grid-row-end: 4;
+position: relative;
+
+
+}
+.item4 p{
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+/*  ..............Calender.................. */
+.item4 .calender-header{
+font-size: 1.5rem;
+color: transparent;
+}
+
+.item4  .calender-content{
+  font-size: 2rem;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  background-color: white;
+  width: 200px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  
+  
+  }
+.item4 .calender-content #month-name{
+    background-color:orangered;
+    border-radius: 5px;
+    /* margin: 0px; */
+    height: 60px;
+  }
+
+  .item4 .calender-content #day-name{
+   font-size: 1rem;
+   margin-top: 5px;
+   color: gray;
+   
+  }
+  .item4 .calender-content #day-number{
+    font-size: 6rem;
+    
+   }
+   .item4 .calender-content #year-name{
+    font-size: 1.5rem;
+    color: gray;
+    
+   }
+.item5 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  position: relative;
+  
+}
+
+.table-name {
+  font-size: 25px;
+}
+/*  ..............to-do-list.................. */
+
+.new-task{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+
+}
+#userdata{
+  min-width: 340px;
+  height: 30px; 
+  border-radius: 3px;
+  border: 2px solid rgba(128, 128, 128, 0.3) ;
+  
+}
+#add{
+  padding: 5px;
+  width: 55px;
+  border-radius: 3px;
+  border: 2px solid rgba(128, 128, 128, 0.3) ;
+  cursor: pointer;
+}
+.task{
+  display: flex;
+  justify-items: flex-start;
+  justify-content: space-between;
+  align-items: center;  
+  overflow:auto;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin-top: 2px;
+  padding: 1.5px;
+}
+
+.completed {
+text-decoration: line-through;
+opacity: 70%;
+}
+.delete{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 0, 0, 0.5);
+  
+  font-size: 17px;
+  padding-right: 3px;
+  
+}
+.taskname{
+  cursor: pointer;
+  
+}
+
+/*  ..............toggle-btn.................. */
+
+.toggle-btn{
+  position: relative;
+  width: 50px;
+  height: 25px;
+ 
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  border: 1px solid gray;
+  margin-left: 85%;
+  margin-top: 3%;
+  
+
+}
+.ball{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  top:50%;
+  left:2px;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-in-out;
+  
+  
+}
+.toggle-btn.active .ball{  
+left: 25px;
+background-color: white;
+
+
+}
+
+.toggle-btn.active{
+  background-color: rgb(111, 179, 247);
+  
+  
+}
+
+
+body.active{
+  /* background-color: rgba(0, 0, 0, 0.85); */
+  color: rgb(255, 255, 255);
+  background-image: url("/imgs/D1.jpg");
+  /* background-image: linear-gradient(to bottom right, black,rgba(0, 0, 0, 0.918)),url("/imgs/d6.jpg"); */
+  animation-name: darkTheme;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+
+}
+@keyframes darkTheme {
+  from  {background-image: url("/imgs/L1.jpg");}
+ 
+  to {background-image: url("/imgs/D1.jpg");}
+  
+}
+
+/*  ..............digital clocks.................. */
+.dc-container{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+
+/* ..............analog clocks.................. */
+.ac-container{
+   
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border: 5px solid black;
+  border-radius: 50%;
+  background-color: aqua;
+}
+.number  {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+.no1 {
+  
+   transform: rotate(30deg); 
+}
+.no2 {
+  
+   transform: rotate(60deg); 
+}
+.no3 {
+  
+   transform: rotate(90deg); 
+}
+.no4 {
+  
+   transform: rotate(120deg); 
+}
+.no5 {
+  
+   transform: rotate(150deg); 
+}
+.no6 {
+  
+   transform: rotate(180deg); 
+}
+.no7 {
+  
+   transform: rotate(210deg); 
+}
+.no8 {
+  
+   transform: rotate(240deg); 
+}
+.no9 {
+  
+   transform: rotate(270deg); 
+}
+.no10 {
+  
+   transform: rotate(300deg); 
+}
+.no11 {
+  
+   transform: rotate(330deg); 
+}
+.no12 {
+  
+   transform: rotate(360deg); 
+}
+
+
+.second-hand, 
+.minutes-hand,
+.hours-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%);     
+}
+
+.second-hand{
+  width: 3px;
+  height: 48%;
+  background-color:red;
+  z-index: 100;
+  border-radius: 5px 5px 0 0;
+  border: .3px solid white;
+  
+}
+.minutes-hand{
+  width: 6px;
+  height: 40%;
+  background-color: black;
+  z-index: 95;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid white;
+}
+
+.hours-hand{
+  width: 8px;
+  height: 35%;
+  background-color: black;
+  z-index: 99;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid white;
+}
+
+.ac-container::after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -30%);
+  z-index: 105;
+}
+/* ..............important hyperlinks.................. */
+
+.item5 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  position: relative;
+ 
+
+  
+ }
+.hyperlinks-container{
+  position: absolute;
+  width: 585px;
+  height: 460px;
+  /* background-color: aliceblue; */
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+
+}   
+.input-url{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: flex-start;
+  /* width: 100%; */
+
+  
+  
+ 
+}
+.input-btns{
+  
+  /* background-color: blueviolet; */
+  width: 100%;
+  margin-left: 5px;
+  padding: 10px; 
+ 
+  
+}
+.saved-url{
+  display: flex;
+  justify-content:start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+  
+  
+  
+
+}
+.writtenUrl{
+  
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 165px;
+  margin: 15px;
+  overflow:auto;
+  background-color: rgba(0, 0, 0, 0.08);
+ 
+  
+  
+}
+.del-url{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 0, 0, 0.5);
+  font-size: 17px;
+  padding-right: 3px;
+ 
+}
+#ful{
+  text-align: center;
+  margin-top: 5px;
+}
+#url{
+  width: 340px;
+  height: 30px;
+  border-radius: 3px;
+  border: 2px solid rgba(128, 128, 128, 0.3) ;
+  
+  
+}
+#url-name{
+  width: 150px;
+  height: 30px;
+  border-radius: 3px;
+  border: 2px solid rgba(128, 128, 128, 0.3) ;
+  
+}
+#save{
+  /* width: 50px;
+  height: 30px; */
+  padding: 5px;
+  width: 55px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 2px solid rgba(128, 128, 128, 0.3) ;
+  
+}
+.hyperlinkField a{
+  text-decoration: none;
+  
+  
+}
+a:link {
+  color: #0094DE;
+  text-decoration: none;
+
+
+}
+a:visited {
+      text-decoration: none;
+color: #0094DE;
+
+}
+a:hover {
+text-decoration: underline;
+color: #DD127B;
+
+}
+

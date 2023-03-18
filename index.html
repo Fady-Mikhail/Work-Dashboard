@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work DashBoard</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+   <div class="main-container">
+        <div class="sub-container">
+            
+            <div class="item1">
+                
+                <span id="clock-header">The Time Now Is</span>
+                <!-- analog Clock     -->
+                <div class="ac-container">
+                    <div class="second-hand"></div>
+                    <div class="minutes-hand"></div>
+                    <div class="hours-hand"></div>
+      
+                    <div class="number no1" style="color: black;">1</div>
+                    <div class="number no2" style="color: black;">2</div>
+                    <div class="number no3" style="color: black;">3</div>
+                    <div class="number no4" style="color: black;">4</div>
+                     <div class="number no5" style="color: black;">5</div>
+                    <div class="number no6" style="color: black;">6</div>
+                    <div class="number no7" style="color: black;">7</div>
+                    <div class="number no8" style="color: black;">8</div>
+                    <div class="number no9" style="color: black;">9</div>
+                    <div class="number no10" style="color: black;">10</div>
+                    <div class="number no11" style="color: black;">11</div>
+                    <div class="number no12" style="color: black;">12</div>
+
+                </div>
+                <!-- Digital Clock     -->
+                <div class="dc-container">
+                    <span id="dc-hh">00</span>
+                    <span >:</span>
+                    <span id="dc-mm">00</span>
+                    <span >:</span>
+                    <span id="dc-ss">00</span>
+                    <span id="dc-ampm">AM</span>
+                    </div>
+            </div>
+                <!-- logo     -->
+            <div class="item2">
+                  <div class="logoandname-container">
+                    
+                        <div class="img-box">
+                            <img id="img">
+                        </div>
+                        <div class="upload">
+                            <label for="upload"> Insert Your Buisness Card Here..</label>
+                            <input type="file" id="upload">
+                        </div>
+                     
+                        <div class="name-container"></div>
+                  </div>
+
+            </div>
+            <!-- ..............to-do-list.................. -->
+            <div class="item3">
+                <div class="toggle-btn">
+                    
+                   <div class="ball"></div>
+                </div>
+                <div class="todo">
+                    <div class="new-task">
+                        <input type="text"
+                        id="userdata"
+                        placeholder="Type your Tasks Here...">
+                        
+                        <button id="add">Add</button>
+                        </div>
+                    
+                       <div id="tasks"></div>
+                    </div>
+                    
+                </div>
+              <!-- ......calender...........          -->
+              
+            <div class="item4">
+               <div class="calender-header">
+                <p >Today Is</p>
+               </div>
+               <div class="calender-content">
+                <p id="month-name">June</p>
+               <p id="day-name">Monday</p>
+               <p id="day-number" style="color: black;">25</p>
+               <p id="year-name">2000</p>
+               </div>
+               
+             <!-- ......important hyperlinks...........          -->
+            </div>
+            <div class="item5"> 
+                <div class="hyperlinks-container">
+                    <div class="input-url">
+                        <div class="input-btns">
+                            <h4 id="ful">Frequently Used Links</h4><br>
+                            <input id="url" type="text" placeholder="Enter Url Here..">
+                            <input id="url-name" type="text" placeholder="Rename it..">
+                            <button id="save">Save</button>
+                        </div>
+                        
+    
+                        <div class="saved-url"></div>
+                    </div>
+                    
+
+
+
+
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+   </div>
+   
+<script src="main.js"></script>
+</body>
+</html>
